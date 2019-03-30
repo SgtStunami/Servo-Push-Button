@@ -4,17 +4,13 @@ This is my first program
 29 March 2019
  */
 #include <Servo.h>
-Servo servoA; //creates a servo object called servoa this allows you to conrol it by calling it servoa later
+Servo servoA; //creates a servo object called servoa this allows you to conrol it by calling it servoA later
 int pos = 0; //variable to store the servo position
 const int redPin = 12; //pin the red LED is connected to
 const int greenPin = 13; //pin the yellow LED is connected to
 const int bluePin = 11; //pin for blue LED 
 const int buttonPin = 2; //pushbutton pin
 int buttonState = 0; //variable for reading pushbutton status
-int randNumber; //random number
-int x = 0; //generated number holder
-int xPrevious = 0; //previous number
-int oldNumber; //old number 
 
 void setup() {
   servoA.attach(9); // this attaches the name servoA to pin 9 on the arduino
