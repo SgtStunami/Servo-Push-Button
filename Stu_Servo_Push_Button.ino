@@ -1,6 +1,5 @@
 /* Servo Learning
 by Brandon Stuhlmueller <signsbystu.com>
-This is my first program
 29 March 2019
  */
 #include <Servo.h>
