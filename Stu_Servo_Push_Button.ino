@@ -1,5 +1,6 @@
 /* Servo Learning
 by Brandon Stuhlmueller <signsbystu.com>
+This is my first program
 29 March 2019
  */
 #include <Servo.h>
@@ -27,17 +28,18 @@ void setup() {
 
 void loop() {
   buttonState = digitalRead(buttonPin); //read state of button with digitalRead and store value in buttonState
-  Serial.println(buttonState);
   if (buttonState == HIGH){ //checks state of button
   digitalWrite(redPin, HIGH); //Roxanne turn on the red light - keep it on until button is pressed
   digitalWrite(greenPin, LOW); //make sure the green light is off when button is high
   } else {
     digitalWrite(greenPin, HIGH); //turn on the green light
     digitalWrite(redPin, LOW); //turn off the reeeed lighhhttt
-    randNumber = random(0,180); //generate random number from 0-180
+    pos = random(0,180); //generate random number from 0-180
     delay(275); //set a delay so the number has time to generate and get loaded
-    servoA.write
-    
-    
+    Serial.print("button pressed");
+    Serial.print("Random Number");
+    Serial.println(pos);
+    servoA.write(pos);
+    delay (500);
   } 
 }
